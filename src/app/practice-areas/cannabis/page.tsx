@@ -58,7 +58,7 @@ export default function CannabisPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=2000&q=80')",
+              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/Old_Bull_lbbglz.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/95 via-[#0a0a0a]/80 to-[#0a0a0a]" />

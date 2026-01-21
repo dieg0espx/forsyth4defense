@@ -23,7 +23,7 @@ export default function PersonalPage() {
           className="absolute inset-0 bg-cover bg-bottom"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1508193638397-1c4234db14d9?auto=format&fit=crop&w=2000&q=80')",
+              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/Cecile_Lake_1_ouhjob.jpg')",
             backgroundPosition: "center 70%",
           }}
         />
@@ -167,7 +167,7 @@ export default function PersonalPage() {
         </div>
       </section>
 
-      {/* Photo Gallery Placeholder */}
+      {/* Photo Gallery */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -183,12 +183,30 @@ export default function PersonalPage() {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+            {[
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Sentinel_Dome_yngham.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Schwartz_Hut.1_1_sxjbld.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/The_Boss.2_j4edin.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Yosemite_Falls_ct7pws.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/186_nn0ala.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/Mt_Conness2_wqhvpr.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/018_lwz4jv.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/Cecile_Lake_1_ouhjob.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/FB_IMG_1719529469471_qvleya.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/Old_Bull_lbbglz.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/North_Pal_myhti7.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/Machapuchre_caaie0.jpg",
+              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/FB_IMG_1583208998591_bsr7lw.jpg",
+            ].map((imageUrl, i) => (
               <div
                 key={i}
-                className="aspect-square bg-[#0a0a0a]/5 border border-gray-200 flex items-center justify-center hover:border-[#b8860b] transition-colors"
+                className="aspect-square relative overflow-hidden border border-gray-200 hover:border-[#b8860b] transition-colors group"
               >
-                <Camera className="h-8 w-8 text-[#0a0a0a]/20" />
+                <img
+                  src={imageUrl}
+                  alt={`Photography by John D. Forsyth ${i + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
             ))}
           </div>

@@ -99,7 +99,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2000&q=80')`,
+            backgroundImage: `url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Yosemite_Falls_ct7pws.jpg')`,
           }}
         />
         {/* Dark overlay with gradient */}
@@ -183,8 +183,15 @@ export default function Home() {
       </section>
 
       {/* About Section - Split layout, premium feel */}
-      <section className="py-24 md:py-32 bg-[#fafafa]">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 md:py-32 bg-[#fafafa] relative">
+        {/* Background image for visual interest */}
+        <div
+          className="absolute inset-0 opacity-5 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/Mt_Conness2_wqhvpr.jpg')`,
+          }}
+        />
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Content */}
             <div>
@@ -470,7 +477,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=2000&q=80')`,
+            backgroundImage: `url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Sentinel_Dome_yngham.jpg')`,
           }}
         />
         <div className="absolute inset-0 bg-[#0a0a0a]/95" />
