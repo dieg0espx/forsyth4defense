@@ -48,7 +48,7 @@ export default function Header() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
           ? "bg-[#0a0a0a]/98 backdrop-blur-md shadow-2xl"
-          : "bg-transparent"
+          : "bg-[#0a0a0a] lg:bg-transparent"
       )}
     >
       {/* Top Bar */}
