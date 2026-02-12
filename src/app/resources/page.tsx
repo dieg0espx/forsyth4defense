@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone, Mail, MapPin, Scale, Search, Users, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Scale, Search, Users, ArrowRight, Globe, Printer } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Legal Resources | Trusted Attorneys & Investigators",
@@ -44,6 +44,23 @@ const criminalDefenseAttorneys = [
     phone: "(415) 324-7071",
     email: null,
   },
+  {
+    name: "Edward Burch",
+    firm: "Law Office of Michael & Burch, LLP",
+    address: ["1 Sansome St, Suite 3500", "San Francisco, CA 94104"],
+    phone: "(415) 946-8996",
+    email: "edward@michaelburchlaw.com",
+    website: "www.michaelburchlaw.com",
+  },
+  {
+    name: "Sam O'Keefe",
+    firm: "Law Office of Douglas Horngrad",
+    address: ["1736 Stockton St, Suite 4", "San Francisco, CA 94133"],
+    phone: "(415) 397-9509",
+    fax: "(415) 397-9519",
+    email: "sam@douglashorngradlawoffices.com",
+    website: "www.horngradlaw.com",
+  },
 ];
 
 const investigators = [
@@ -61,10 +78,12 @@ interface ContactCardProps {
   firm: string | null;
   address: string[];
   phone: string;
+  fax?: string | null;
   email: string | null;
+  website?: string | null;
 }
 
-function ContactCard({ name, firm, address, phone, email }: ContactCardProps) {
+function ContactCard({ name, firm, address, phone, fax, email, website }: ContactCardProps) {
   return (
     <div className="bg-white border border-gray-200 p-6 hover:border-[#b8860b] transition-colors">
       <h3 className="font-display text-xl text-[#0a0a0a] mb-1">{name}</h3>
@@ -85,6 +104,12 @@ function ContactCard({ name, firm, address, phone, email }: ContactCardProps) {
           <Phone className="h-4 w-4 text-[#b8860b]" />
           <span className="text-sm">{phone}</span>
         </a>
+        {fax && (
+          <div className="flex items-center gap-3 text-gray-600">
+            <Printer className="h-4 w-4 text-[#b8860b]" />
+            <span className="text-sm">Fax: {fax}</span>
+          </div>
+        )}
         {email && (
           <a
             href={`mailto:${email}`}
@@ -92,6 +117,17 @@ function ContactCard({ name, firm, address, phone, email }: ContactCardProps) {
           >
             <Mail className="h-4 w-4 text-[#b8860b]" />
             <span className="text-sm">{email}</span>
+          </a>
+        )}
+        {website && (
+          <a
+            href={`https://${website}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-gray-600 hover:text-[#b8860b] transition-colors"
+          >
+            <Globe className="h-4 w-4 text-[#b8860b]" />
+            <span className="text-sm">{website}</span>
           </a>
         )}
       </div>
@@ -105,13 +141,14 @@ export default function ResourcesPage() {
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover"
           style={{
             backgroundImage:
               "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/186_nn0ala.jpg')",
+            backgroundPosition: "center 80%",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/95 via-[#0a0a0a]/80 to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]/90" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
           <p className="text-[11px] uppercase tracking-[0.4em] text-[#b8860b] mb-6 font-medium">
@@ -215,6 +252,9 @@ export default function ResourcesPage() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
+          <p className="text-white/30 text-xs mt-8 max-w-2xl mx-auto leading-relaxed">
+            There is no charge for the first consultation if conducted at the office. Any consultation conducted off-site or at a detention facility requires a fee paid up front. If the client decides to retain the office, 100% of the consultation fee will be applied to the initial retainer for services.
+          </p>
         </div>
       </section>
     </>

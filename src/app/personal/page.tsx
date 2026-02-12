@@ -24,10 +24,10 @@ export default function PersonalPage() {
           style={{
             backgroundImage:
               "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/Cecile_Lake_1_ouhjob.jpg')",
-            backgroundPosition: "center 70%",
+            backgroundPosition: "center 35%",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/95 via-[#0a0a0a]/70 to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/45 to-[#0a0a0a]/90" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
           <p className="text-[11px] uppercase tracking-[0.4em] text-[#b8860b] mb-6 font-medium">
@@ -134,8 +134,12 @@ export default function PersonalPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Shakira */}
             <div className="bg-white border border-gray-200 p-8 text-center">
-              <div className="w-24 h-24 bg-[#0a0a0a] mx-auto mb-6 flex items-center justify-center">
-                <Dog className="h-10 w-10 text-[#b8860b]/50" />
+              <div className="aspect-square relative overflow-hidden mx-auto mb-6">
+                <img
+                  src="https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/FB_IMG_1583208998591_bsr7lw.jpg"
+                  alt="Mighty Shakira - Anatolian Shepherd"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-display text-2xl text-[#0a0a0a] mb-2">
                 The Mighty Shakira
@@ -150,8 +154,12 @@ export default function PersonalPage() {
 
             {/* Ajax */}
             <div className="bg-white border border-gray-200 p-8 text-center">
-              <div className="w-24 h-24 bg-[#0a0a0a] mx-auto mb-6 flex items-center justify-center">
-                <Dog className="h-10 w-10 text-[#b8860b]/50" />
+              <div className="aspect-square relative overflow-hidden mx-auto mb-6">
+                <img
+                  src="https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/FB_IMG_1719529469471_qvleya.jpg"
+                  alt="Ajax the Greater - Anatolian Shepherd"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-display text-2xl text-[#0a0a0a] mb-2">
                 Ajax the Greater
@@ -242,6 +250,9 @@ export default function PersonalPage() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
+          <p className="text-white/30 text-xs mt-8 max-w-2xl mx-auto leading-relaxed">
+            There is no charge for the first consultation if conducted at the office. Any consultation conducted off-site or at a detention facility requires a fee paid up front. If the client decides to retain the office, 100% of the consultation fee will be applied to the initial retainer for services.
+          </p>
         </div>
       </section>
     </>

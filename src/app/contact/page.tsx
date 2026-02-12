@@ -41,7 +41,7 @@ export default function ContactPage() {
               "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/Old_Bull_lbbglz.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/95 via-[#0a0a0a]/80 to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]/90" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
           <p className="text-[11px] uppercase tracking-[0.4em] text-[#b8860b] mb-6 font-medium">
@@ -271,6 +271,9 @@ export default function ContactPage() {
                 <p className="text-xs text-gray-400 mt-6 text-center">
                   By submitting this form, you agree to be contacted by our office.
                   This does not create an attorney-client relationship.
+                </p>
+                <p className="text-xs text-gray-400 mt-4 text-center leading-relaxed">
+                  There is no charge for the first consultation if conducted at the office. Any consultation conducted off-site or at a detention facility requires a fee paid up front. If the client decides to retain the office, 100% of the consultation fee will be applied to the initial retainer for services.
                 </p>
               </div>
             </div>
