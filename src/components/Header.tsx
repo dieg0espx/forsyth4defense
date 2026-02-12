@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import clsx from "clsx";
 
 const navigation = {
@@ -58,21 +58,10 @@ export default function Header() {
           scrolled ? "py-1" : "py-2"
         )}
       >
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <span className="hidden md:block text-[11px] uppercase tracking-[0.2em] text-white/40 font-light">
+        <div className="max-w-7xl mx-auto px-6 flex justify-center md:justify-start items-center">
+          <span className="text-[11px] uppercase tracking-[0.2em] text-white/40 font-light">
             San Francisco Criminal Defense
           </span>
-          <a
-            href="tel:+14158123257"
-            className="flex items-center gap-3 text-white/70 hover:text-[#b8860b] transition-colors duration-300 group"
-          >
-            <span className="hidden sm:block text-[11px] uppercase tracking-[0.15em] text-white/40">
-              24/7 Confidential
-            </span>
-            <span className="h-4 w-px bg-white/20 hidden sm:block" />
-            <Phone className="h-3.5 w-3.5 group-hover:text-[#b8860b] transition-colors" />
-            <span className="text-sm font-medium tracking-wide">(415) 812-3257</span>
-          </a>
         </div>
       </div>
 
