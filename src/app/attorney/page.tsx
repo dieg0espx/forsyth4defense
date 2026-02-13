@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone, GraduationCap, BookOpen, Users, Award, Scale, ArrowRight, Check } from "lucide-react";
+import { Phone, GraduationCap, BookOpen, Users, Award, ArrowRight, Check } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Meet John D. Forsyth | San Francisco Criminal Defense Attorney",
@@ -124,12 +124,12 @@ export default function AttorneyPage() {
               <div className="sticky top-32 space-y-6">
                 {/* Attorney Card */}
                 <div className="bg-[#0a0a0a] p-8">
-                  <div className="aspect-[3/4] relative bg-[#1a1a1a] mb-6 flex items-center justify-center">
-                    <div className="text-center text-white/60">
-                      <Scale className="h-16 w-16 mx-auto mb-4 opacity-40" />
-                      <p className="font-display text-lg text-white">John D. Forsyth</p>
-                      <p className="text-sm text-white/40">Criminal Defense Attorney</p>
-                    </div>
+                  <div className="aspect-[3/4] relative bg-[#1a1a1a] mb-6 overflow-hidden">
+                    <img
+                      src="https://res.cloudinary.com/dku1gnuat/image/upload/v1770976683/John_Headshot_ehwxhy.webp"
+                      alt="John D. Forsyth - San Francisco Criminal Defense Attorney"
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
                   <a
                     href="tel:+14158123257"
@@ -338,9 +338,25 @@ export default function AttorneyPage() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <p className="text-white/30 text-xs mt-8 max-w-2xl mx-auto leading-relaxed">
-            There is no charge for the first consultation if conducted at the office. Any consultation conducted off-site or at a detention facility requires a fee paid up front. If the client decides to retain the office, 100% of the consultation fee will be applied to the initial retainer for services.
-          </p>
+          <div className="mt-10 max-w-2xl mx-auto border border-white/10 p-6">
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#b8860b] font-semibold mb-3">
+              Consultation Fee Policy
+            </p>
+            <ul className="space-y-2 text-sm text-white/50 leading-relaxed text-left">
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>There is no charge for the first consultation if conducted at the office.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>Any consultation conducted off-site or at a detention facility requires a fee paid up front.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>If the client decides to retain the office, 100% of the consultation fee will be applied to the initial retainer for services.</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </>

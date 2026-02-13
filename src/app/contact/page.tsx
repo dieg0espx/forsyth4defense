@@ -272,9 +272,25 @@ export default function ContactPage() {
                   By submitting this form, you agree to be contacted by our office.
                   This does not create an attorney-client relationship.
                 </p>
-                <p className="text-xs text-gray-400 mt-4 text-center leading-relaxed">
-                  There is no charge for the first consultation if conducted at the office. Any consultation conducted off-site or at a detention facility requires a fee paid up front. If the client decides to retain the office, 100% of the consultation fee will be applied to the initial retainer for services.
-                </p>
+                <div className="mt-6 p-5 bg-[#fafafa] border border-gray-200">
+                  <p className="text-[11px] uppercase tracking-[0.15em] text-[#b8860b] font-semibold mb-3">
+                    Consultation Fee Policy
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-600 leading-relaxed">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                      <span>There is no charge for the first consultation if conducted at the office.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                      <span>Any consultation conducted off-site or at a detention facility requires a fee paid up front.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                      <span>If the client decides to retain the office, 100% of the consultation fee will be applied to the initial retainer for services.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
