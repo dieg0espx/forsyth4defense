@@ -100,7 +100,7 @@ export default function DUIPage() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center bg-bottom"
           style={{
             backgroundImage:
               "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/186_nn0ala.jpg')",

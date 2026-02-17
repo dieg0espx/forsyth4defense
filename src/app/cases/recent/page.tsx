@@ -153,7 +153,7 @@ export default function RecentCasesPage() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center bg-top"
           style={{
             backgroundImage:
               "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Sentinel_Dome_yngham.jpg')",

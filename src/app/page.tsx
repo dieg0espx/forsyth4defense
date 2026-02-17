@@ -99,7 +99,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Yosemite_Falls_ct7pws.jpg')`,
+            backgroundImage: `url('/Evolution Lake.1.JPG')`,
           }}
         />
         {/* Dark overlay with gradient */}

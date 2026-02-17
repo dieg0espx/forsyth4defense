@@ -83,8 +83,7 @@ export default function HomicideKidnappingPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/Machapuchre_caaie0.jpg')",
+            backgroundImage: "url('/IMG_8158.JPG')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/95 via-[#0a0a0a]/80 to-[#0a0a0a]" />
