@@ -202,11 +202,11 @@ export default function PastCasesPage() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="mt-8 max-w-2xl mx-auto border border-white/10 p-6">
+          <div className="mt-8 max-w-2xl mx-auto border border-gray-300 p-6">
             <p className="text-[11px] uppercase tracking-[0.15em] text-[#b8860b] font-semibold mb-3">
               Consultation Fee Policy
             </p>
-            <ul className="space-y-2 text-sm text-white/50 leading-relaxed text-left">
+            <ul className="space-y-2 text-sm text-gray-600 leading-relaxed text-left">
               <li className="flex items-start gap-2">
                 <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
                 <span>There is no charge for the first consultation if conducted at the office.</span>
