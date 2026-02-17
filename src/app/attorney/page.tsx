@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone, GraduationCap, BookOpen, Users, Award, Scale, ArrowRight, Check } from "lucide-react";
+import { Phone, GraduationCap, BookOpen, Users, Award, ArrowRight, Check } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Meet John D. Forsyth | San Francisco Criminal Defense Attorney",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "sex crimes defense attorney",
     "Stanford Law faculty criminal defense",
     "Native American attorney California",
-    "Hastings Law graduate",
+    "UC San Francisco College of the Law graduate",
   ],
   openGraph: {
     title: "Meet John D. Forsyth | Criminal Defense Attorney",
@@ -41,7 +41,7 @@ const jsonLd = {
     },
     {
       "@type": "CollegeOrUniversity",
-      name: "Hastings College of the Law",
+      name: "University of California San Francisco College of the Law",
     },
   ],
   knowsAbout: [
@@ -53,7 +53,7 @@ const jsonLd = {
   memberOf: [
     {
       "@type": "Organization",
-      name: "Covelo Indian Community",
+      name: "Round Valley Indian Tribes",
     },
   ],
 };
@@ -81,7 +81,7 @@ export default function AttorneyPage() {
               "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/Mt_Conness2_wqhvpr.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/95 via-[#0a0a0a]/80 to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]/90" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
           <p className="text-[11px] uppercase tracking-[0.4em] text-[#b8860b] mb-6 font-medium">
@@ -124,12 +124,12 @@ export default function AttorneyPage() {
               <div className="sticky top-32 space-y-6">
                 {/* Attorney Card */}
                 <div className="bg-[#0a0a0a] p-8">
-                  <div className="aspect-[3/4] relative bg-[#1a1a1a] mb-6 flex items-center justify-center">
-                    <div className="text-center text-white/60">
-                      <Scale className="h-16 w-16 mx-auto mb-4 opacity-40" />
-                      <p className="font-display text-lg text-white">John D. Forsyth</p>
-                      <p className="text-sm text-white/40">Criminal Defense Attorney</p>
-                    </div>
+                  <div className="aspect-[3/4] relative bg-[#1a1a1a] mb-6 overflow-hidden">
+                    <img
+                      src="https://res.cloudinary.com/dku1gnuat/image/upload/v1770976683/John_Headshot_ehwxhy.webp"
+                      alt="John D. Forsyth - San Francisco Criminal Defense Attorney"
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
                   <a
                     href="tel:+14158123257"
@@ -178,12 +178,12 @@ export default function AttorneyPage() {
                   <p>
                     John D. Forsyth is a San Francisco native. His education is entirely
                     local: St. Brendan Elementary, Saint Ignatius College Preparatory, U.C.
-                    Berkeley and Hastings College of the Law.
+                    Berkeley and University of California San Francisco College of the Law.
                   </p>
 
                   <p>
                     John is a tribally enrolled member of the{" "}
-                    <strong className="text-[#0a0a0a]">Covelo Indian Community</strong> in
+                    <strong className="text-[#0a0a0a]">Round Valley Indian Tribes</strong> in
                     Mendocino County. Family members still reside on the{" "}
                     <strong className="text-[#0a0a0a]">Hoopa Valley Reservation</strong> in
                     Humboldt County. During law school, John spent his summers working there
@@ -219,7 +219,7 @@ export default function AttorneyPage() {
                 <div className="space-y-6">
                   {[
                     {
-                      school: "Hastings College of the Law",
+                      school: "University of California San Francisco College of the Law",
                       detail: "San Francisco, CA — Juris Doctorate, December 1993",
                     },
                     {
@@ -309,7 +309,7 @@ export default function AttorneyPage() {
             backgroundImage: "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/North_Pal_myhti7.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-[#0a0a0a]/95" />
+        <div className="absolute inset-0 bg-[#0a0a0a]/75" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <p className="text-[11px] uppercase tracking-[0.3em] text-[#b8860b] mb-4">
@@ -337,6 +337,25 @@ export default function AttorneyPage() {
               Contact Online
               <ArrowRight className="h-4 w-4" />
             </Link>
+          </div>
+          <div className="mt-10 max-w-2xl mx-auto border border-white/10 p-6">
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#b8860b] font-semibold mb-3">
+              Consultation Fee Policy
+            </p>
+            <ul className="space-y-2 text-sm text-white/50 leading-relaxed text-left">
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>There is no charge for the first consultation if conducted at the office.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>Any consultation conducted off-site or at a detention facility requires a fee paid up front.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>If the client decides to retain the office, 100% of the consultation fee will be applied to the initial retainer for services.</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

@@ -32,35 +32,27 @@ interface CaseResult {
 }
 
 const recentCases: CaseResult[] = [
-  // 2026 Cases - NEW
   {
-    year: "2026",
     court: "United States District Court, Northern District of California",
     charge: "Federal Child Pornography",
     description:
       "Client was charged with federal child pornography offenses. The federal sentencing guidelines called for a sentence of 108 to 135 months (9 to 11+ years) in federal prison. Through extensive negotiation and presentation of mitigating factors, the defense achieved a significantly reduced sentence.",
     outcome: "60 MONTHS FEDERAL PRISON. SENTENCE 50% BELOW GUIDELINES.",
-    highlight: true,
   },
   {
-    year: "2026",
     court: "Alameda County Superior Court",
     charge: "Child Molestation - 13 Counts",
     description:
       "Client was charged with 13 counts of child molestation. Through aggressive defense strategy and thorough investigation, all charges related to sex crimes were dismissed.",
     outcome: "13 COUNTS DISMISSED. NO SEX CRIME CONVICTION.",
-    highlight: true,
   },
   {
-    year: "2026",
     court: "Alameda County Superior Court",
     charge: "Child Molestation - 11 Counts",
     description:
       "Client faced 11 counts of child molestation with potential sentence of 15 years to life in state prison. Through skilled negotiation and defense preparation, the client avoided the maximum sentence and achieved a significantly reduced term.",
     outcome: "15+ YEARS TO LIFE AVOIDED. PLEA TO 20-YEAR TERM.",
-    highlight: true,
   },
-  // Existing Cases
   {
     court: "Butte County Superior Court",
     charge: "Child Molestation",
@@ -159,7 +151,7 @@ export default function RecentCasesPage() {
               "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Sentinel_Dome_yngham.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/95 via-[#0a0a0a]/80 to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/60 to-[#0a0a0a]/95" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
           <p className="text-[11px] uppercase tracking-[0.4em] text-[#b8860b] mb-6 font-medium">
@@ -304,6 +296,25 @@ export default function RecentCasesPage() {
               Request Free Consultation
               <ArrowRight className="h-4 w-4" />
             </Link>
+          </div>
+          <div className="mt-8 max-w-2xl mx-auto border border-white/10 p-6">
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#b8860b] font-semibold mb-3">
+              Consultation Fee Policy
+            </p>
+            <ul className="space-y-2 text-sm text-white/50 leading-relaxed text-left">
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>There is no charge for the first consultation if conducted at the office.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>Any consultation conducted off-site or at a detention facility requires a fee paid up front.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>If the client decides to retain the office, 100% of the consultation fee will be applied to the initial retainer for services.</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

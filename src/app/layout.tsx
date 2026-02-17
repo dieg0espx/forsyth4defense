@@ -143,7 +143,7 @@ const jsonLd = {
       },
       {
         "@type": "CollegeOrUniversity",
-        name: "Hastings College of the Law",
+        name: "University of California San Francisco College of the Law",
       },
     ],
   },

@@ -48,7 +48,7 @@ export default function Header() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
           ? "bg-[#0a0a0a]/98 backdrop-blur-md shadow-2xl"
-          : "bg-transparent"
+          : "bg-[#0a0a0a] lg:bg-transparent"
       )}
     >
       {/* Top Bar */}
@@ -64,12 +64,12 @@ export default function Header() {
           </span>
           <a
             href="tel:+14158123257"
-            className="flex items-center gap-3 text-white/70 hover:text-[#b8860b] transition-colors duration-300 group"
+            className="hidden md:flex items-center gap-3 text-white/70 hover:text-[#b8860b] transition-colors duration-300 group"
           >
-            <span className="hidden sm:block text-[11px] uppercase tracking-[0.15em] text-white/40">
+            <span className="text-[11px] uppercase tracking-[0.15em] text-white/40">
               24/7 Confidential
             </span>
-            <span className="h-4 w-px bg-white/20 hidden sm:block" />
+            <span className="h-4 w-px bg-white/20" />
             <Phone className="h-3.5 w-3.5 group-hover:text-[#b8860b] transition-colors" />
             <span className="text-sm font-medium tracking-wide">(415) 812-3257</span>
           </a>

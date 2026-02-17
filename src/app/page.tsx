@@ -12,7 +12,7 @@ import {
 
 const practiceAreas = [
   {
-    title: "Sex Crimes Defense",
+    title: "Sex Crime Defense",
     description:
       "Strategic defense against the most serious accusations. Protecting your rights, reputation, and future.",
     href: "/practice-areas/sex-crimes",
@@ -85,9 +85,9 @@ const stats = [
 const credentials = [
   "Stanford Law School Trial Advocacy Faculty since 2001",
   "UC Berkeley Graduate",
-  "Hastings College of the Law",
-  "Former Alameda County Prosecutor",
-  "Covelo Indian Community Member",
+  "University of California San Francisco College of the Law",
+  "Prosecutorial Experience at the Alameda County District Attorney's Office",
+  "Round Valley Indian Tribes",
 ];
 
 export default function Home() {
@@ -103,7 +103,7 @@ export default function Home() {
           }}
         />
         {/* Dark overlay with gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/95 via-[#0a0a0a]/80 to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/65 to-[#0a0a0a]/95" />
 
         {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
@@ -114,9 +114,9 @@ export default function Home() {
 
           {/* Main headline */}
           <h1 className="font-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 leading-[1.1]">
-            When Everything
+            A Safe Harbor
             <br />
-            <span className="text-[#b8860b]">Is At Stake</span>
+            <span className="text-[#b8860b]">In a Time of Crisis</span>
           </h1>
 
           {/* Divider */}
@@ -206,11 +206,11 @@ export default function Home() {
                 <p>
                   A San Francisco native with deep roots in the community. Education
                   entirely local: St. Brendan Elementary, Saint Ignatius College
-                  Preparatory, UC Berkeley, and Hastings College of the Law.
+                  Preparatory, UC Berkeley, and University of California San Francisco College of the Law.
                 </p>
                 <p>
                   As a tribally enrolled member of the{" "}
-                  <strong className="text-[#0a0a0a]">Covelo Indian Community</strong>,
+                  <strong className="text-[#0a0a0a]">Round Valley Indian Tribes</strong>,
                   John developed his passion for defending the rights of those without
                   a voice during summers spent working for tribal attorneys.
                 </p>
@@ -480,7 +480,7 @@ export default function Home() {
             backgroundImage: `url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Sentinel_Dome_yngham.jpg')`,
           }}
         />
-        <div className="absolute inset-0 bg-[#0a0a0a]/95" />
+        <div className="absolute inset-0 bg-[#0a0a0a]/75" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <p className="text-[11px] uppercase tracking-[0.3em] text-[#b8860b] mb-6 font-medium">
@@ -508,6 +508,25 @@ export default function Home() {
           <p className="text-white/30 mt-8 text-sm">
             Available 24/7 for urgent matters
           </p>
+          <div className="mt-8 max-w-2xl mx-auto border border-white/10 p-6">
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#b8860b] font-semibold mb-3">
+              Consultation Fee Policy
+            </p>
+            <ul className="space-y-2 text-sm text-white/50 leading-relaxed text-left">
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>There is no charge for the first consultation if conducted at the office.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>Any consultation conducted off-site or at a detention facility requires a fee paid up front.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>If the client decides to retain the office, 100% of the consultation fee will be applied to the initial retainer for services.</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </>

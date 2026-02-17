@@ -5,16 +5,104 @@ import { Phone, ExternalLink, Newspaper, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "News & Legal Updates | Criminal Defense News",
   description:
-    "Stay informed about criminal defense news, legal updates, and relevant articles. Resources from the Law Office of John D. Forsyth.",
+    "Stay informed about criminal defense news, legal updates, and relevant articles. News coverage and media articles featuring cases handled by the Law Office of John D. Forsyth.",
   keywords: [
     "criminal defense news",
+    "John Forsyth news",
     "legal updates California",
     "criminal law news",
     "San Francisco legal news",
   ],
 };
 
-const newsArticles = [
+interface NewsArticle {
+  title: string;
+  description: string;
+  source: string;
+  url: string;
+}
+
+const newsArticles: NewsArticle[] = [
+  {
+    title: "Marin County Jury Convicts Accused Child Molester",
+    description:
+      "A man charged with molesting two children he babysat for friends in Novato was convicted by a Marin County jury.",
+    source: "Marin Independent Journal",
+    url: "https://www.marinij.com/2020/11/10/marin-county-jury-convicts-accused-child-molester/",
+  },
+  {
+    title: "San Bruno Man Faces a Year Behind Bars",
+    description:
+      "A San Bruno man faces a year behind bars after pleading no contest to a hit-and-run crash that killed a pedestrian, who police have said was at fault.",
+    source: "The Mercury News",
+    url: "https://forsyth4defense.squarespace.com/s/SanBruno_Man_Faces.pdf",
+  },
+  {
+    title: "Little Released from Custody",
+    description:
+      "A Siskiyou County judge agreed to release Hoopa resident Suzanne Little (Aubrey) from custody on Monday after her attorney, John D. Forsyth, requested to have her released\u2026",
+    source: "Two Rivers Tribune",
+    url: "https://www.forsyth4defense.com/s/Two_Rivers_Tribune.pdf",
+  },
+  {
+    title: "Former Exec Gets 3 Years in Internet Sex Case",
+    description:
+      "A Marin interactive-TV executive will spend nearly three years in federal prison for using the internet to solicit sex from a minor, a federal judge ruled in San Francisco\u2026",
+    source: "Marin Independent Journal",
+    url: "https://www.forsyth4defense.com/s/Former_Exec_gets_3_years4.pdf",
+  },
+  {
+    title: "California Trial Judge Says NET PORN LAW Violative of Speech Rights, Commerce Clause",
+    description:
+      "A California law that makes it illegal to knowingly transmit sexual material to a minor via the internet is unconstitutionally overbroad in violation of the First Amendment\u2026 Judge says law on sending material to minors violates Constitution; prosecutors will pursue trial against ex-teacher in state court\u2026",
+    source: "Bureau of National Affairs, Washington D.C.",
+    url: "https://www.forsyth4defense.com/s/CA_Trial_Judge_Says.pdf",
+  },
+  {
+    title: "Internet Seduction Felony Case Dismissed",
+    description:
+      "The case of a San Ramon man arrested last summer by Piedmont Police after having sexual conversations on the internet with a supposed teenage girl is being challenged in the Contra Costa County Courts\u2026",
+    source: "Contra Costa Times",
+    url: "https://www.forsyth4defense.com/s/Internet_Seduction.pdf",
+  },
+  {
+    title: "Internet Sex Case Dispute",
+    description:
+      "A Contra Costa County Superior Court Judge on Monday declared unconstitutional a Penal Code section that makes it illegal to transmit sexual material over the internet if the person sending the information knows the recipient is a minor.",
+    source: "Contra Costa County Times",
+    url: "https://www.forsyth4defense.com/s/Internet_Sex_Case_Dispute.pdf",
+  },
+  {
+    title: "Judge Strikes Law Against Online Sex Info to Minors",
+    description:
+      "As pedophiles turn to the Web, are sex crimes on the rise?",
+    source: "CalLaw",
+    url: "https://www.forsyth4defense.com/s/Judge_Strikes_Law.pdf",
+  },
+  {
+    title: "A Pedophile\u2019s New Tool",
+    description:
+      "A state law designed to net people who use the Internet to lure kids is being called unconstitutional by some attorneys.",
+    source: "CyberCrime News",
+    url: "https://www.forsyth4defense.com/s/A_Pedophiles_New_Tool.pdf",
+  },
+  {
+    title: "Caught in the Web",
+    description:
+      "\u2026Criminal Defense Attorney John Forsyth feared that Maddock would believe \u201Cprison is good for everyone.\u201D Instead, Forsyth said Maddock gave his client\u2019s case a fair hearing and carefully considered defense briefs\u2026",
+    source: "The Recorder",
+    url: "https://www.forsyth4defense.com/s/Caught_in_the_Web.pdf",
+  },
+  {
+    title: "Judge Brings Sacramento Savvy to CoCo Bench",
+    description:
+      "",
+    source: "The Recorder",
+    url: "https://www.forsyth4defense.com/s/Judge_Bring_Sac_Savvy.pdf",
+  },
+];
+
+const legalResources = [
   {
     title: "Understanding Your Rights During a Police Stop",
     description:
@@ -80,10 +168,10 @@ export default function NewsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Schwartz_Hut.1_1_sxjbld.jpg')",
+              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1770932038/112_u5zyyy.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/95 via-[#0a0a0a]/80 to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]/90" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
           <p className="text-[11px] uppercase tracking-[0.4em] text-[#b8860b] mb-6 font-medium">
@@ -103,15 +191,57 @@ export default function NewsPage() {
       <section className="py-16 bg-[#fafafa]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-gray-600 leading-relaxed">
-            Stay informed about criminal defense topics, legal updates, and your rights
-            under California law. The information provided here is for educational purposes
-            only and should not be considered legal advice.
+            Cases handled by the Law Office of John D. Forsyth have been covered by
+            publications across California and nationally. Below is a selection of news
+            articles featuring notable cases and legal developments.
           </p>
         </div>
       </section>
 
-      {/* Articles Grid */}
+      {/* News Articles - Media Coverage */}
       <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#b8860b] mb-4">
+              Media Coverage
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl text-[#0a0a0a]">
+              In the News
+            </h2>
+          </div>
+          <div className="space-y-6">
+            {newsArticles.map((article, index) => (
+              <a
+                key={index}
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[#fafafa] border border-gray-200 p-6 md:p-8 hover:border-[#b8860b] transition-colors group"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <span className="inline-block text-[10px] uppercase tracking-[0.2em] bg-[#0a0a0a] text-white/80 px-3 py-1 mb-4">
+                      {article.source}
+                    </span>
+                    <h3 className="font-display text-xl text-[#0a0a0a] mb-3 group-hover:text-[#b8860b] transition-colors">
+                      {article.title}
+                    </h3>
+                    {article.description && (
+                      <p className="text-gray-500 text-sm leading-relaxed">
+                        {article.description}
+                      </p>
+                    )}
+                  </div>
+                  <ExternalLink className="h-5 w-5 text-gray-300 group-hover:text-[#b8860b] transition-colors flex-shrink-0 mt-1" />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Resources Grid */}
+      <section className="py-24 bg-[#fafafa]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#b8860b] mb-4">
@@ -122,10 +252,10 @@ export default function NewsPage() {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {newsArticles.map((article, index) => (
+            {legalResources.map((article, index) => (
               <div
                 key={index}
-                className="bg-[#fafafa] border border-gray-200 p-8 hover:border-[#b8860b] transition-colors group"
+                className="bg-white border border-gray-200 p-8 hover:border-[#b8860b] transition-colors group"
               >
                 <span className="inline-block text-[10px] uppercase tracking-[0.2em] bg-[#0a0a0a] text-white/80 px-3 py-1 mb-4">
                   {article.category}
@@ -141,7 +271,7 @@ export default function NewsPage() {
       </section>
 
       {/* External Resources */}
-      <section className="py-24 bg-[#fafafa]">
+      <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#b8860b] mb-4">
@@ -158,7 +288,7 @@ export default function NewsPage() {
                 href={resource.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-5 p-5 bg-white border border-gray-200 hover:border-[#b8860b] transition-all group"
+                className="flex items-start gap-5 p-5 bg-[#fafafa] border border-gray-200 hover:border-[#b8860b] transition-all group"
               >
                 <div className="w-10 h-10 bg-[#0a0a0a] flex items-center justify-center flex-shrink-0">
                   <ExternalLink className="h-4 w-4 text-[#b8860b]" />
@@ -176,7 +306,7 @@ export default function NewsPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-white border-y border-gray-100">
+      <section className="py-20 bg-[#fafafa] border-y border-gray-100">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Newspaper className="h-10 w-10 text-[#b8860b]/50 mx-auto mb-6" />
           <h2 className="font-display text-3xl text-[#0a0a0a] mb-4">
@@ -218,6 +348,25 @@ export default function NewsPage() {
               Request Free Consultation
               <ArrowRight className="h-4 w-4" />
             </Link>
+          </div>
+          <div className="mt-8 max-w-2xl mx-auto border border-white/10 p-6">
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#b8860b] font-semibold mb-3">
+              Consultation Fee Policy
+            </p>
+            <ul className="space-y-2 text-sm text-white/50 leading-relaxed text-left">
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>There is no charge for the first consultation if conducted at the office.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>Any consultation conducted off-site or at a detention facility requires a fee paid up front.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#b8860b] font-bold mt-0.5">&#8226;</span>
+                <span>If the client decides to retain the office, 100% of the consultation fee will be applied to the initial retainer for services.</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
