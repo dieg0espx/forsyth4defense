@@ -95,11 +95,23 @@ export default function Home() {
     <>
       {/* Hero Section - Full viewport, dramatic */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background Images - Crossfade */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-[fadeInOut_15s_ease-in-out_infinite]"
           style={{
             backgroundImage: `url('/Evolution Lake.1.JPG')`,
+          }}
+        />
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-[fadeInOut_15s_ease-in-out_5s_infinite]"
+          style={{
+            backgroundImage: `url('/Close Up Leaves.1.jpg')`,
+          }}
+        />
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-[fadeInOut_15s_ease-in-out_10s_infinite]"
+          style={{
+            backgroundImage: `url('/015 (2).JPG')`,
           }}
         />
         {/* Dark overlay with gradient */}

@@ -243,6 +243,12 @@ html {
 }
 
 /* Animation utilities */
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  20%, 33% { opacity: 1; }
+  53% { opacity: 0; }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
