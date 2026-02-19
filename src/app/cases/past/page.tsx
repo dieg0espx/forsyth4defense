@@ -59,7 +59,7 @@ const caseCategories = [
   },
   {
     name: "Attempted Homicide",
-    href: "/practice-areas/homicide-kidnapping",
+    href: "/practice-areas/attempted-homicide",
     description: "Defense in attempted murder and assault with intent to kill cases.",
     hasCases: false,
   },
