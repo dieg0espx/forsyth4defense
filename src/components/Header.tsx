@@ -25,6 +25,7 @@ const navigation = {
     { name: "Domestic Violence", href: "/practice-areas/domestic-violence" },
     { name: "Cannabis", href: "/practice-areas/cannabis" },
     { name: "Federal Weapons Charges", href: "/practice-areas/federal-weapons" },
+    { name: "Attempted Homicide", href: "/practice-areas/attempted-homicide" },
     { name: "Homicide/Kidnapping", href: "/practice-areas/homicide-kidnapping" },
   ],
 };
