@@ -71,7 +71,7 @@ export default function AttemptedHomicidePage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/IMG_8158.JPG')",
+            backgroundImage: "url('/Close Up Leaves.1.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]/90" />

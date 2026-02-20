@@ -103,13 +103,7 @@ export default function Home() {
           }}
         />
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-[fadeInOut_15s_ease-in-out_5s_infinite]"
-          style={{
-            backgroundImage: `url('/Close Up Leaves.1.jpg')`,
-          }}
-        />
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-[fadeInOut_15s_ease-in-out_10s_infinite]"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-[fadeInOut_15s_ease-in-out_7.5s_infinite]"
           style={{
             backgroundImage: `url('/015 (2).JPG')`,
           }}
