@@ -263,16 +263,6 @@ export default function FederalWeaponsPage() {
         </div>
       </section>
 
-      {/* Urgency Banner */}
-      <section className="py-12 bg-[#b8860b]">
-        <div className="max-w-4xl mx-auto px-6 flex items-center justify-center gap-4">
-          <AlertTriangle className="h-8 w-8 text-[#0a0a0a]" />
-          <p className="text-[#0a0a0a] text-lg font-medium text-center">
-            <strong>Federal cases move quickly.</strong> Early intervention can make the difference in your case.
-          </p>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-[#0a0a0a]">
         <div className="max-w-4xl mx-auto px-6 text-center">
