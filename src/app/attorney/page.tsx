@@ -78,7 +78,7 @@ export default function AttorneyPage() {
           className="absolute inset-0 bg-cover bg-center bg-top"
           style={{
             backgroundImage:
-              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/Mt_Conness2_wqhvpr.jpg')",
+              "url('/IMG_1291.JPG')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]/90" />
