@@ -1,23 +1,7 @@
-import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock, Shield, ArrowRight } from "lucide-react";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Contact | Free Consultation with Criminal Defense Attorney",
-  description:
-    "Contact the Law Office of John D. Forsyth for a free consultation. San Francisco criminal defense attorney with 30+ years experience. Call (415) 812-3257.",
-  keywords: [
-    "criminal defense attorney consultation",
-    "San Francisco lawyer contact",
-    "free legal consultation",
-    "criminal defense lawyer near me",
-  ],
-  openGraph: {
-    title: "Contact | Law Office of John D. Forsyth",
-    description:
-      "Get a free consultation with experienced San Francisco criminal defense attorney John D. Forsyth.",
-    images: ["/og-image.jpg"],
-  },
-};
+import { useState } from "react";
+import { Phone, Mail, MapPin, Clock, Shield, CheckCircle, AlertCircle } from "lucide-react";
 
 const areasServed = [
   "San Francisco",
@@ -30,6 +14,57 @@ const areasServed = [
 ];
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    caseType: '',
+    description: '',
+  });
+
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('loading');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setStatus('success');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        caseType: '',
+        description: '',
+      });
+    } catch (error) {
+      setStatus('error');
+      setErrorMessage('Failed to send your message. Please try calling us directly at (415) 812-3257.');
+    }
+  };
   return (
     <>
       {/* Hero Section */}
@@ -160,7 +195,32 @@ export default function ContactPage() {
                 <h3 className="font-display text-2xl text-[#0a0a0a] mb-8">
                   Request a Consultation
                 </h3>
-                <form className="space-y-5">
+
+                {/* Success Message */}
+                {status === 'success' && (
+                  <div className="mb-6 p-4 bg-green-50 border border-green-200 flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-green-800 font-semibold">Thank you for contacting us!</p>
+                      <p className="text-green-700 text-sm mt-1">
+                        Your consultation request has been received. We will contact you within 24 hours.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Error Message */}
+                {status === 'error' && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 flex items-start gap-3">
+                    <AlertCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-red-800 font-semibold">Error sending message</p>
+                      <p className="text-red-700 text-sm mt-1">{errorMessage}</p>
+                    </div>
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
                       <label
@@ -174,6 +234,8 @@ export default function ContactPage() {
                         id="firstName"
                         name="firstName"
                         required
+                        value={formData.firstName}
+                        onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-200 focus:border-[#b8860b] focus:outline-none transition-colors"
                       />
                     </div>
@@ -189,6 +251,8 @@ export default function ContactPage() {
                         id="lastName"
                         name="lastName"
                         required
+                        value={formData.lastName}
+                        onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-200 focus:border-[#b8860b] focus:outline-none transition-colors"
                       />
                     </div>
@@ -205,6 +269,8 @@ export default function ContactPage() {
                       id="phone"
                       name="phone"
                       required
+                      value={formData.phone}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-200 focus:border-[#b8860b] focus:outline-none transition-colors"
                     />
                   </div>
@@ -220,6 +286,8 @@ export default function ContactPage() {
                       id="email"
                       name="email"
                       required
+                      value={formData.email}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-200 focus:border-[#b8860b] focus:outline-none transition-colors"
                     />
                   </div>
@@ -233,6 +301,8 @@ export default function ContactPage() {
                     <select
                       id="caseType"
                       name="caseType"
+                      value={formData.caseType}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-200 focus:border-[#b8860b] focus:outline-none transition-colors bg-white"
                     >
                       <option value="">Select a case type</option>
@@ -255,17 +325,20 @@ export default function ContactPage() {
                     </label>
                     <textarea
                       id="message"
-                      name="message"
+                      name="description"
                       rows={4}
+                      value={formData.description}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-200 focus:border-[#b8860b] focus:outline-none transition-colors resize-none"
                       placeholder="Please provide a brief description of your legal matter..."
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-[#b8860b] text-[#0a0a0a] py-4 font-semibold text-sm uppercase tracking-[0.15em] hover:bg-[#d4a017] transition-colors"
+                    disabled={status === 'loading'}
+                    className="w-full bg-[#b8860b] text-[#0a0a0a] py-4 font-semibold text-sm uppercase tracking-[0.15em] hover:bg-[#d4a017] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Request Free Consultation
+                    {status === 'loading' ? 'Sending...' : 'Request Free Consultation'}
                   </button>
                 </form>
                 <p className="text-xs text-gray-400 mt-6 text-center">
