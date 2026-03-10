@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { sendEmail } from '@/lib/resend';
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,17 +13,6 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-
-    // Create nodemailer transporter
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: process.env.SMTP_SECURE === 'true',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
 
     // Email content
     const emailHtml = `
@@ -137,9 +126,8 @@ Submitted on: ${new Date().toLocaleString('en-US', { timeZone: 'America/Los_Ange
     // Send email to both recipients
     const recipients = process.env.EMAIL_TO || 'diego@comcreate.org,John@forsyth4defense.com';
 
-    await transporter.sendMail({
-      from: `"Forsyth4Defense Contact Form" <${process.env.EMAIL_FROM}>`,
-      to: recipients,
+    await sendEmail({
+      to: recipients.split(',').map(e => e.trim()),
       subject: `New Consultation Request - ${caseType} - ${firstName} ${lastName}`,
       text: emailText,
       html: emailHtml,
