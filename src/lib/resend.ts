@@ -1,7 +1,5 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export type EmailOptions = {
   to: string | string[]
   subject: string
@@ -9,10 +7,25 @@ export type EmailOptions = {
   text?: string
 }
 
-export async function sendEmail(options: EmailOptions) {
-  const from = process.env.EMAIL_FROM || 'Your App <noreply@yourdomain.com>'
+let cached: Resend | null = null
 
-  const { data, error } = await resend.emails.send({
+const getResend = (): Resend => {
+  if (cached) return cached
+  const apiKey = process.env.RESEND_API_KEY
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY is not configured')
+  }
+  cached = new Resend(apiKey)
+  return cached
+}
+
+export async function sendEmail(options: EmailOptions) {
+  const from = process.env.EMAIL_FROM
+  if (!from) {
+    throw new Error('EMAIL_FROM is not configured')
+  }
+
+  const { data, error } = await getResend().emails.send({
     from,
     to: Array.isArray(options.to) ? options.to : [options.to],
     subject: options.subject,

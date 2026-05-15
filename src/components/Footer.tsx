@@ -1,33 +1,11 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
-
-const practiceAreas = [
-  { name: "Sex Crimes Defense", href: "/practice-areas/sex-crimes" },
-  { name: "DUI/Vehicular Homicide", href: "/practice-areas/dui" },
-  { name: "Domestic Violence", href: "/practice-areas/domestic-violence" },
-  { name: "Three Strikes", href: "/practice-areas/three-strikes" },
-  { name: "Federal Charges", href: "/practice-areas/federal-weapons" },
-  { name: "Homicide/Kidnapping", href: "/practice-areas/homicide-kidnapping" },
-];
-
-const quickLinks = [
-  { name: "About John D. Forsyth", href: "/attorney" },
-  { name: "Case Results", href: "/cases/recent" },
-  { name: "Client Testimonials", href: "/testimonials" },
-  { name: "Resources", href: "/resources" },
-  { name: "News", href: "/news" },
-  { name: "Contact", href: "/contact" },
-];
-
-const areasServed = [
-  "San Francisco County",
-  "Alameda County",
-  "Contra Costa County",
-  "Marin County",
-  "San Mateo County",
-  "Santa Clara County",
-  "All California Counties",
-];
+import { SITE, CONTACT } from "@/lib/site-config";
+import {
+  practiceAreas,
+  footerQuickLinks as quickLinks,
+  areasServed,
+} from "@/lib/site-navigation";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -43,6 +21,7 @@ export default function Footer() {
               Law Office of
             </p>
             <p className="font-display text-2xl md:text-3xl">John D. Forsyth</p>
+            <span className="sr-only">{SITE.name}</span>
           </div>
           <Link
             href="/contact"
@@ -62,22 +41,22 @@ export default function Footer() {
             </h4>
             <div className="space-y-4">
               <a
-                href="tel:+14158123257"
+                href={CONTACT.phoneHref}
                 className="flex items-center gap-3 text-white/60 hover:text-white transition-colors group"
               >
                 <Phone className="h-4 w-4 text-[#b8860b]/60 group-hover:text-[#b8860b] transition-colors" />
-                <span className="text-sm">(415) 812-3257</span>
+                <span className="text-sm">{CONTACT.phone}</span>
               </a>
               <a
-                href="mailto:john@forsyth4defense.com"
+                href={CONTACT.emailHref}
                 className="flex items-center gap-3 text-white/60 hover:text-white transition-colors group"
               >
                 <Mail className="h-4 w-4 text-[#b8860b]/60 group-hover:text-[#b8860b] transition-colors" />
-                <span className="text-sm">john@forsyth4defense.com</span>
+                <span className="text-sm">{CONTACT.email}</span>
               </a>
               <div className="flex items-center gap-3 text-white/60">
                 <MapPin className="h-4 w-4 text-[#b8860b]/60" />
-                <span className="text-sm">San Francisco, California</span>
+                <span className="text-sm">{CONTACT.address}</span>
               </div>
             </div>
             <p className="mt-6 text-[11px] uppercase tracking-[0.15em] text-white/30">
@@ -144,7 +123,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/30 text-xs text-center md:text-left">
-              &copy; {currentYear} Law Office of John D. Forsyth. All rights reserved.
+              &copy; {currentYear} {SITE.name}. All rights reserved.
             </p>
             <div className="flex gap-6 text-xs">
               <Link
@@ -160,7 +139,7 @@ export default function Footer() {
                 Disclaimer
               </Link>
               <Link
-                href="/sitemap"
+                href="/sitemap-page"
                 className="text-white/30 hover:text-white/60 transition-colors"
               >
                 Sitemap

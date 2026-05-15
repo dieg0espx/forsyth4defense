@@ -164,7 +164,7 @@ export default function AttemptedHomicidePage() {
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-1.5 h-1.5 bg-[#b8860b] rounded-full" />
-                  Qualifies as a "strike" under Three Strikes Law
+                  Qualifies as a &ldquo;strike&rdquo; under Three Strikes Law
                 </li>
               </ul>
             </div>
@@ -181,7 +181,7 @@ export default function AttemptedHomicidePage() {
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-1.5 h-1.5 bg-[#b8860b] rounded-full" />
-                  Qualifies as a "strike" under Three Strikes Law
+                  Qualifies as a &ldquo;strike&rdquo; under Three Strikes Law
                 </li>
               </ul>
             </div>

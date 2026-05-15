@@ -85,9 +85,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.forsyth4defense.com",
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
 };
 
 // JSON-LD Schema for Law Firm
@@ -200,11 +197,6 @@ const jsonLd = {
       closes: "18:00",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: "47",
-  },
 };
 
 export default function RootLayout({

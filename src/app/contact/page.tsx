@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Shield, CheckCircle, AlertCircle } from "lucide-react";
+import { CONTACT, HOURS } from "@/lib/site-config";
 
 const areasServed = [
   "San Francisco",
@@ -60,9 +61,9 @@ export default function ContactPage() {
         caseType: '',
         description: '',
       });
-    } catch (error) {
+    } catch {
       setStatus('error');
-      setErrorMessage('Failed to send your message. Please try calling us directly at (415) 812-3257.');
+      setErrorMessage(`Failed to send your message. Please try calling us directly at ${CONTACT.phone}.`);
     }
   };
   return (
@@ -113,7 +114,7 @@ export default function ContactPage() {
               <div className="space-y-4">
                 {/* Phone */}
                 <a
-                  href="tel:+14158123257"
+                  href={CONTACT.phoneHref}
                   className="flex items-start gap-5 p-5 bg-white border border-gray-200 hover:border-[#b8860b] transition-all group"
                 >
                   <div className="w-12 h-12 bg-[#0a0a0a] flex items-center justify-center flex-shrink-0">
@@ -124,7 +125,7 @@ export default function ContactPage() {
                       Call Now
                     </p>
                     <p className="text-xl font-display text-[#0a0a0a] group-hover:text-[#b8860b] transition-colors">
-                      (415) 812-3257
+                      {CONTACT.phone}
                     </p>
                     <p className="text-gray-500 text-sm mt-1">Available for urgent matters</p>
                   </div>
@@ -132,7 +133,7 @@ export default function ContactPage() {
 
                 {/* Email */}
                 <a
-                  href="mailto:john@forsyth4defense.com"
+                  href={CONTACT.emailHref}
                   className="flex items-start gap-5 p-5 bg-white border border-gray-200 hover:border-[#b8860b] transition-all group"
                 >
                   <div className="w-12 h-12 bg-[#0a0a0a] flex items-center justify-center flex-shrink-0">
@@ -143,7 +144,7 @@ export default function ContactPage() {
                       Email
                     </p>
                     <p className="text-lg text-[#0a0a0a] group-hover:text-[#b8860b] transition-colors">
-                      john@forsyth4defense.com
+                      {CONTACT.email}
                     </p>
                     <p className="text-gray-500 text-sm mt-1">We respond within 24 hours</p>
                   </div>
@@ -174,9 +175,9 @@ export default function ContactPage() {
                     <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-1">
                       Office Hours
                     </p>
-                    <p className="text-[#0a0a0a]">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p className="text-[#0a0a0a]">{HOURS.weekdays}</p>
                     <p className="text-gray-500 text-sm mt-1">
-                      Emergency calls accepted 24/7
+                      {HOURS.emergency}
                     </p>
                   </div>
                 </div>

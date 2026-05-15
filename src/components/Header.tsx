@@ -4,30 +4,17 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Phone, ChevronDown, ArrowRight } from "lucide-react";
 import clsx from "clsx";
+import { CONTACT } from "@/lib/site-config";
+import {
+  practiceNav,
+  resultsNav,
+  practiceAreas,
+} from "@/lib/site-navigation";
 
 const navigation = {
-  practice: [
-    { name: "Meet John D. Forsyth", href: "/attorney" },
-    { name: "Professional Philosophy", href: "/philosophy" },
-    { name: "Resources", href: "/resources" },
-    { name: "Up Close and Personal", href: "/personal" },
-    { name: "Contact", href: "/contact" },
-  ],
-  results: [
-    { name: "Recent Client Cases", href: "/cases/recent" },
-    { name: "Past Client Cases", href: "/cases/past" },
-    { name: "Client Testimonials", href: "/testimonials" },
-  ],
-  practiceAreas: [
-    { name: "Sex Crimes Defense", href: "/practice-areas/sex-crimes" },
-    { name: "DUI/Vehicular Homicide", href: "/practice-areas/dui" },
-    { name: "Three Strikes", href: "/practice-areas/three-strikes" },
-    { name: "Domestic Violence", href: "/practice-areas/domestic-violence" },
-    { name: "Cannabis", href: "/practice-areas/cannabis" },
-    { name: "Federal Criminal Defense", href: "/practice-areas/federal-weapons" },
-    { name: "Attempted Homicide", href: "/practice-areas/attempted-homicide" },
-    { name: "Homicide/Kidnapping", href: "/practice-areas/homicide-kidnapping" },
-  ],
+  practice: practiceNav,
+  results: resultsNav,
+  practiceAreas,
 };
 
 export default function Header() {
@@ -36,11 +23,22 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    let frame = 0;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        setScrolled((prev) => {
+          const next = window.scrollY > 20;
+          return prev === next ? prev : next;
+        });
+        frame = 0;
+      });
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }, []);
 
   return (
@@ -64,7 +62,7 @@ export default function Header() {
             San Francisco Criminal Defense
           </span>
           <a
-            href="tel:+14158123257"
+            href={CONTACT.phoneHref}
             className="hidden md:flex items-center gap-3 text-white/70 hover:text-[#b8860b] transition-colors duration-300 group"
           >
             <span className="text-[11px] uppercase tracking-[0.15em] text-white/40">
@@ -72,7 +70,7 @@ export default function Header() {
             </span>
             <span className="h-4 w-px bg-white/20" />
             <Phone className="h-3.5 w-3.5 group-hover:text-[#b8860b] transition-colors" />
-            <span className="text-sm font-medium tracking-wide">(415) 812-3257</span>
+            <span className="text-sm font-medium tracking-wide">{CONTACT.phone}</span>
           </a>
         </div>
       </div>

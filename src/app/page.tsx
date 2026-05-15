@@ -9,6 +9,8 @@ import {
   Check,
   Quote,
 } from "lucide-react";
+import { CONTACT } from "@/lib/site-config";
+import HeroCrossfade from "@/components/HeroCrossfade";
 
 const practiceAreas = [
   {
@@ -95,19 +97,8 @@ export default function Home() {
     <>
       {/* Hero Section - Full viewport, dramatic */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Images - Crossfade */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-[fadeInOut_15s_ease-in-out_infinite]"
-          style={{
-            backgroundImage: `url('/Evolution Lake.1.JPG')`,
-          }}
-        />
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-[fadeInOut_15s_ease-in-out_7.5s_infinite]"
-          style={{
-            backgroundImage: `url('/015 (2).JPG')`,
-          }}
-        />
+        {/* Background Images - Crossfade (paused when off-screen) */}
+        <HeroCrossfade imageA="/Evolution Lake.1.JPG" imageB="/015 (2).JPG" />
         {/* Dark overlay with gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/65 to-[#0a0a0a]/95" />
 
@@ -141,11 +132,11 @@ export default function Home() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="tel:+14158123257"
+              href={CONTACT.phoneHref}
               className="group inline-flex items-center gap-3 px-8 py-4 bg-[#b8860b] text-[#0a0a0a] text-sm uppercase tracking-[0.15em] font-semibold hover:bg-[#d4a017] transition-all duration-300"
             >
               <Phone className="h-4 w-4" />
-              (415) 812-3257
+              {CONTACT.phone}
               <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </a>
             <Link
@@ -504,11 +495,11 @@ export default function Home() {
           </p>
 
           <a
-            href="tel:+14158123257"
+            href={CONTACT.phoneHref}
             className="group inline-flex items-center gap-4 px-10 py-5 bg-[#b8860b] text-[#0a0a0a] text-lg md:text-xl font-semibold hover:bg-[#d4a017] transition-all duration-300"
           >
             <Phone className="h-5 w-5" />
-            (415) 812-3257
+            {CONTACT.phone}
           </a>
 
           <p className="text-white/30 mt-8 text-sm">
