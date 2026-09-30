@@ -136,7 +136,7 @@ export default function AttorneyPage() {
                 <div className="bg-[#0a0a0a] p-8">
                   <div className="aspect-[3/4] relative bg-[#1a1a1a] mb-6 overflow-hidden">
                     <img
-                      src="https://res.cloudinary.com/dku1gnuat/image/upload/v1770976683/John_Headshot_ehwxhy.webp"
+                      src="https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/John_Headshot_ehwxhy.webp"
                       alt="John D. Forsyth - San Francisco Criminal Defense Attorney"
                       className="w-full h-full object-cover object-top"
                     />
@@ -316,7 +316,7 @@ export default function AttorneyPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/North_Pal_myhti7.jpg')",
+            backgroundImage: "url('https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/North_Pal_myhti7.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-[#0a0a0a]/75" />

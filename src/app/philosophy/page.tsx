@@ -23,7 +23,7 @@ export default function PhilosophyPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/The_Boss.2_j4edin.jpg')",
+              "url('https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/The_Boss.2_j4edin.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]/90" />

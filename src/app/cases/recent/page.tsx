@@ -148,7 +148,7 @@ export default function RecentCasesPage() {
           className="absolute inset-0 bg-cover"
           style={{
             backgroundImage:
-              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Sentinel_Dome_yngham.jpg')",
+              "url('https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/Sentinel_Dome_yngham.jpg')",
             backgroundPosition: "center -280px",
           }}
         />

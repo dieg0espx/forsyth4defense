@@ -144,7 +144,7 @@ export default function ResourcesPage() {
           className="absolute inset-0 bg-cover"
           style={{
             backgroundImage:
-              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/186_nn0ala.jpg')",
+              "url('https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/186_nn0ala.jpg')",
             backgroundPosition: "center 80%",
           }}
         />
