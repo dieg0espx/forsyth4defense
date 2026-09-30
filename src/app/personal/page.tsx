@@ -23,7 +23,7 @@ export default function PersonalPage() {
           className="absolute inset-0 bg-cover bg-bottom"
           style={{
             backgroundImage:
-              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/Cecile_Lake_1_ouhjob.jpg')",
+              "url('https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/Cecile_Lake_1_ouhjob.jpg')",
             backgroundPosition: "center 35%",
           }}
         />
@@ -136,7 +136,7 @@ export default function PersonalPage() {
             <div className="bg-white border border-gray-200 p-8 text-center">
               <div className="aspect-square relative overflow-hidden mx-auto mb-6">
                 <img
-                  src="https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/FB_IMG_1583208998591_bsr7lw.jpg"
+                  src="https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/FB_IMG_1583208998591_bsr7lw.jpg"
                   alt="Mighty Shakira - Anatolian Shepherd"
                   className="w-full h-full object-cover"
                 />
@@ -156,7 +156,7 @@ export default function PersonalPage() {
             <div className="bg-white border border-gray-200 p-8 text-center">
               <div className="aspect-square relative overflow-hidden mx-auto mb-6">
                 <img
-                  src="https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/FB_IMG_1719529469471_qvleya.jpg"
+                  src="https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/FB_IMG_1719529469471_qvleya.jpg"
                   alt="Ajax the Greater - Anatolian Shepherd"
                   className="w-full h-full object-cover"
                 />
@@ -192,19 +192,19 @@ export default function PersonalPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Sentinel_Dome_yngham.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Schwartz_Hut.1_1_sxjbld.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/The_Boss.2_j4edin.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Yosemite_Falls_ct7pws.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/186_nn0ala.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/Mt_Conness2_wqhvpr.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/018_lwz4jv.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/Cecile_Lake_1_ouhjob.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/FB_IMG_1719529469471_qvleya.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/Old_Bull_lbbglz.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/North_Pal_myhti7.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/Machapuchre_caaie0.jpg",
-              "https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/FB_IMG_1583208998591_bsr7lw.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/Sentinel_Dome_yngham.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/Schwartz_Hut.1_1_sxjbld.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/The_Boss.2_j4edin.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/Yosemite_Falls_ct7pws.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/186_nn0ala.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/Mt_Conness2_wqhvpr.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/018_lwz4jv.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/Cecile_Lake_1_ouhjob.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/FB_IMG_1719529469471_qvleya.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/Old_Bull_lbbglz.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/North_Pal_myhti7.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/Machapuchre_caaie0.jpg",
+              "https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/FB_IMG_1583208998591_bsr7lw.jpg",
             ].map((imageUrl, i) => (
               <div
                 key={i}

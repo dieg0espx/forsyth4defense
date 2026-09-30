@@ -57,7 +57,7 @@ export default function DomesticViolencePage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026972/018_lwz4jv.jpg')",
+              "url('https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/018_lwz4jv.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]/90" />

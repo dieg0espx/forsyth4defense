@@ -185,7 +185,7 @@ export default function Home() {
         <div
           className="absolute inset-0 opacity-5 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026973/Mt_Conness2_wqhvpr.jpg')`,
+            backgroundImage: `url('https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/Mt_Conness2_wqhvpr.jpg')`,
           }}
         />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -474,7 +474,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: `url('https://res.cloudinary.com/dku1gnuat/image/upload/v1769026974/Sentinel_Dome_yngham.jpg')`,
+            backgroundImage: `url('https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/Sentinel_Dome_yngham.jpg')`,
           }}
         />
         <div className="absolute inset-0 bg-[#0a0a0a]/75" />

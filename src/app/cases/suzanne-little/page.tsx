@@ -25,7 +25,7 @@ export default function SuzanneLittlePage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://res.cloudinary.com/dku1gnuat/image/upload/v1770931788/081_c8gyub.jpg')",
+              "url('https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/081_c8gyub.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/60 to-[#0a0a0a]/95" />
@@ -54,7 +54,7 @@ export default function SuzanneLittlePage() {
             <div className="max-w-[240px] mx-auto md:max-w-none md:w-1/3 mb-8 md:mb-0 flex-shrink-0">
               <div className="border border-gray-200 overflow-hidden">
                 <img
-                  src="https://res.cloudinary.com/dku1gnuat/image/upload/v1770932437/suzanne_kujuoz.png"
+                  src="https://pub-b97047b26450411faa5d48ef879838b4.r2.dev/suzanne_kujuoz.png"
                   alt="Suzanne Dorene Little"
                   className="w-full h-auto"
                 />
